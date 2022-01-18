@@ -3,11 +3,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.0'
+ruby '3.0.3'
 
 gem 'activestorage'
 gem 'bootstrap-sass'
 gem 'coffee-rails'
+gem 'faker', git: 'http://github.com/faker-ruby/faker.git', branch: 'master'
 gem 'jbuilder'
 gem 'jquery-rails'
 gem 'oj'
@@ -39,12 +40,11 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'chromedriver-helper'
   gem 'db-query-matchers'
   gem 'json_spec'
   gem 'launchy'
   gem 'rubocop', require: false
-  gem 'selenium-webdriver'
+  gem 'webdrivers'
   gem 'shoulda-matchers'
 end
 
