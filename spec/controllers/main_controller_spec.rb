@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'spec_helper'
+
 
 RSpec.describe MainController, type: :controller do
   describe 'GET #index' do

@@ -8,6 +8,7 @@ require 'rspec/rails'
 require 'shoulda-matchers'
 require 'rspec/json_expectations'
 require 'database_cleaner'
+require 'factory_bot'
 
 begin
   ActiveRecord::Migration.maintain_test_schema!
@@ -20,6 +21,10 @@ RSpec.configure do |config|
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryBot::Syntax::Methods
+
+  config.before(:suite) do
+    FactoryBot.find_definitions
+  end
 
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
