@@ -341,6 +341,7 @@ DEPENDENCIES
   rails (~> 7.0.1)
   rails-controller-testing
   rb-readline
+  rexml
   rspec-json_expectations
   rspec-rails
   rubocop

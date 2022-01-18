@@ -20,6 +20,7 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbolinks'
 gem 'turbo-rails'
+gem 'rexml'
 gem 'uglifier'
 
 group :development, :test do
