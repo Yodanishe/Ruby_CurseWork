@@ -1,6 +1,6 @@
 FactoryBot.define do
-  factory name :product do
-    dev_id   { rand(1..5) }
+  factory :product do
+    dev_id      { rand(1..5) }
     title       { Faker::Lorem.word.camelcase }
     bytitle     { title.downcase }
     img         { Faker::Lorem.sentence(word_count: 10).downcase }
