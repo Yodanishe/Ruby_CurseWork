@@ -636,3 +636,90 @@ Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 583)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 8]]
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered main/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 273)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 385)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 4439)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 164)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 585)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDeveloper Create (0.3ms)[0m  [1m[32mINSERT INTO "developers" ("title", "bytitle", "img", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Molestiae fugiat eum dolorum temporibus asperiores libero et iusto illum."], ["bytitle", "quidem quam cum impedit voluptas beatae cumque officiis ad repellat."], ["img", "eligendi modi id reprehenderit magnam voluptatem iure sunt exercitationem rerum."], ["description", "Asperiores sint qui delectus ad illo dolores sed voluptatem molestias."], ["created_at", "2022-01-18 13:55:36.811137"], ["updated_at", "2022-01-18 13:55:36.811137"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDeveloper Create (0.1ms)[0m  [1m[32mINSERT INTO "developers" ("title", "bytitle", "img", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eius voluptas tempore dicta quis eum reprehenderit et omnis repellat."], ["bytitle", "amet est libero error eum inventore quo est fuga dolorem."], ["img", "sapiente dicta deserunt a iusto voluptatum error accusamus rerum sunt."], ["description", "Omnis et quis perspiciatis molestiae voluptatem sit nemo quae repudiandae."], ["created_at", "2022-01-18 13:55:36.813579"], ["updated_at", "2022-01-18 13:55:36.813579"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDeveloper Create (0.1ms)[0m  [1m[32mINSERT INTO "developers" ("title", "bytitle", "img", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Sint sequi at minima odio quos corrupti ipsa quis et."], ["bytitle", "ut dignissimos et ex vel est nostrum non consequuntur quibusdam."], ["img", "consequatur occaecati et est voluptas ex quibusdam enim pariatur quia."], ["description", "Provident omnis et voluptatem excepturi molestias accusantium qui doloremque dolor."], ["created_at", "2022-01-18 13:55:36.814966"], ["updated_at", "2022-01-18 13:55:36.814966"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mDeveloper Load (0.1ms)[0m  [1m[34mSELECT "developers".* FROM "developers" LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by MainController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering main/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered main/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 164)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 581)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 5], ["title", "Aspernatur"], ["bytitle", "aspernatur"], ["content", nil], ["price", 171.0], ["old_price", 177.0], ["status", 1], ["keywords", "aspernatur"], ["description", "Est veritatis sit expedita quia ut necessitatibus numquam iure earum."], ["img", "nisi incidunt vero enim fugiat qui et perspiciatis dolorem ab."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.825814"], ["updated_at", "2022-01-18 13:55:36.825814"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 1], ["title", "In"], ["bytitle", "in"], ["content", nil], ["price", 73.0], ["old_price", 205.0], ["status", 1], ["keywords", "in"], ["description", "Vitae nostrum quidem voluptas molestiae voluptatem iusto eum debitis qui."], ["img", "voluptatum incidunt et quia et expedita eligendi et quia tempore."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.827598"], ["updated_at", "2022-01-18 13:55:36.827598"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 4], ["title", "Reiciendis"], ["bytitle", "reiciendis"], ["content", nil], ["price", 489.0], ["old_price", 318.0], ["status", 1], ["keywords", "reiciendis"], ["description", "Omnis nesciunt corrupti ut accusantium deserunt vel nihil perferendis distinctio."], ["img", "dignissimos nobis aliquid et non facere non impedit suscipit nihil."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.833562"], ["updated_at", "2022-01-18 13:55:36.833562"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 2], ["title", "Nemo"], ["bytitle", "nemo"], ["content", nil], ["price", 133.0], ["old_price", 230.0], ["status", 1], ["keywords", "nemo"], ["description", "Nihil ut minus nobis non maiores molestias explicabo suscipit autem."], ["img", "aut dolorem doloremque iste similique necessitatibus harum nesciunt saepe distinctio."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.835249"], ["updated_at", "2022-01-18 13:55:36.835249"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 5], ["title", "Qui"], ["bytitle", "qui"], ["content", nil], ["price", 370.0], ["old_price", 353.0], ["status", 1], ["keywords", "qui"], ["description", "Voluptatem aut eum quaerat alias dolores in et iste explicabo."], ["img", "exercitationem sit nulla voluptatem beatae natus dignissimos blanditiis veritatis quidem."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.836527"], ["updated_at", "2022-01-18 13:55:36.836527"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 2], ["title", "Doloribus"], ["bytitle", "doloribus"], ["content", nil], ["price", 347.0], ["old_price", 342.0], ["status", 1], ["keywords", "doloribus"], ["description", "Nobis quae quasi quia recusandae ut magnam neque quam nemo."], ["img", "amet omnis autem sunt facilis et ut voluptatem quae non."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.837847"], ["updated_at", "2022-01-18 13:55:36.837847"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 5], ["title", "Molestiae"], ["bytitle", "molestiae"], ["content", nil], ["price", 143.0], ["old_price", 115.0], ["status", 1], ["keywords", "molestiae"], ["description", "Soluta deleniti veniam occaecati quae quibusdam quas impedit tempore aut."], ["img", "omnis ipsum sed perferendis laboriosam expedita deleniti qui est sunt."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.839119"], ["updated_at", "2022-01-18 13:55:36.839119"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("category_id", "dev_id", "title", "bytitle", "content", "price", "old_price", "status", "keywords", "description", "img", "hit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category_id", nil], ["dev_id", 2], ["title", "Qui"], ["bytitle", "qui"], ["content", nil], ["price", 448.0], ["old_price", 60.0], ["status", 1], ["keywords", "qui"], ["description", "Dolorem unde fugiat quaerat reprehenderit delectus eos qui consequatur autem."], ["img", "et accusantium est corporis reiciendis quae maxime animi aspernatur et."], ["hit", 1], ["created_at", "2022-01-18 13:55:36.840375"], ["updated_at", "2022-01-18 13:55:36.840375"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 8]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
