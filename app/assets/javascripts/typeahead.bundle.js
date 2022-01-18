@@ -11,19 +11,6 @@
         });
     } else if (typeof exports === "object") {
         module.exports = factory(require("jquery"));
-    } el/*!
- * typeahead.js 0.11.1
- * https://github.com/twitter/typeahead.js
- * Copyright 2013-2015 Twitter, Inc. and other contributors; Licensed MIT
- */
-
-(function(root, factory) {
-    if (typeof define === "function" && define.amd) {
-        define("bloodhound", [ "jquery" ], function(a0) {
-            return root["Bloodhound"] = factory(a0);
-        });
-    } else if (typeof exports === "object") {
-        module.exports = factory(require("jquery"));
     } else {
         root["Bloodhound"] = factory(jQuery);
     }
