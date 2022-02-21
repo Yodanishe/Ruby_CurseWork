@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,33 +12,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_30_144736) do
-
+ActiveRecord::Schema.define(version: 20_220_130_144_736) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "developers", force: :cascade do |t|
-    t.string "title"
-    t.string "bytitle"
-    t.string "img"
-    t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'developers', force: :cascade do |t|
+    t.string 'title'
+    t.string 'bytitle'
+    t.string 'img'
+    t.string 'description'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "products", force: :cascade do |t|
-    t.string "title"
-    t.string "bytitle"
-    t.text "content"
-    t.float "price"
-    t.integer "old_price"
-    t.integer "status"
-    t.string "keywords"
-    t.string "description"
-    t.string "img"
-    t.integer "hit"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'products', force: :cascade do |t|
+    t.string 'title'
+    t.string 'bytitle'
+    t.text 'content'
+    t.float 'price'
+    t.integer 'old_price'
+    t.integer 'status'
+    t.string 'keywords'
+    t.string 'description'
+    t.string 'img'
+    t.integer 'hit'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
-
 end
