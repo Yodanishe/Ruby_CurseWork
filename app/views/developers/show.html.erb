@@ -4,6 +4,6 @@
   <%= render @developer.products %>
 </div>
 
-<%= link_to (image_tag ""), new_developer_product_path(@developer, @developer.products.build),
+<%= link_to "Add product", new_developer_product_path(@developer, @developer.products.build),
     class: "", id: "" %>
-<%= link_to (image_tag ""), developers_path, class: "", id: "" %>
+<%= link_to "Back", developers_path, class: "", id: "" %>

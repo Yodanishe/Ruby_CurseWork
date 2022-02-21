@@ -1,0 +1,14 @@
+<div class="">
+  <div>
+    <%= image_tag "" + product.image, class: "" %>
+    <p>
+      <strong>Название:</strong>
+      <%= product.title %>
+    </p>
+    <div><%= link_to 'Посмотреть', [product.developer, product], class: ""  %></div>
+  </div>
+  <%= link_to 'Редактировать', edit_developer_product_path(product.developer, product), class: "" %>
+  <%= link_to 'Убрать', [product.developer, product], class: "",
+              method: :delete,
+              data: { confirm: 'Are you sure?' }%>
+</div>
