@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,31 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_130_144_736) do
+ActiveRecord::Schema.define(version: 2022_02_01_173823) do
+
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'developers', force: :cascade do |t|
-    t.string 'title'
-    t.string 'bytitle'
-    t.string 'img'
-    t.string 'description'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "developers", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'products', force: :cascade do |t|
-    t.string 'title'
-    t.string 'bytitle'
-    t.text 'content'
-    t.float 'price'
-    t.integer 'old_price'
-    t.integer 'status'
-    t.string 'keywords'
-    t.string 'description'
-    t.string 'img'
-    t.integer 'hit'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "product_keywords", force: :cascade do |t|
+    t.string "keyword"
+    t.bigint "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_product_keywords_on_product_id"
   end
+
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "image"
+    t.float "price"
+    t.string "status"
+    t.bigint "developer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["developer_id"], name: "index_products_on_developer_id"
+  end
+
+  add_foreign_key "product_keywords", "products"
+  add_foreign_key "products", "developers"
 end

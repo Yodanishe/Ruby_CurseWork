@@ -1,4 +1,3 @@
-# frozen_string_literal: true
-
 class Developer < ApplicationRecord
+    has_many :products
 end
