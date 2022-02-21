@@ -10,11 +10,5 @@ RSpec.describe 'Developers', type: :request do
 
       expect(subject).to eq(developer.title)
     end
-
-    it 'assigns the all developers' do
-      developers = Developer.all
-
-      expect(developers).to eq('test')
-    end
   end
 end

@@ -10,11 +10,5 @@ RSpec.describe 'Products', type: :request do
 
       expect(subject).to eq(product.title)
     end
-
-    it 'assigns the all products' do
-      products = Product.all
-
-      expect(products).to eq('test')
-    end
   end
 end
