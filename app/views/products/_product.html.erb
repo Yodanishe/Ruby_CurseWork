@@ -7,7 +7,7 @@
       <%= image_tag(product.image, alt: "", class: "img-responsive") %>
     <% end %>
 
-    <%= button_to 'Редактировать', edit_developer_product_path(product.developer, product), class: ""%>
+    <%= button_to 'Edit', edit_developer_product_path(product.developer, product), class: ""%>
     <%= button_to 'Удалить', [product.developer, product], class: "",
                 method: :delete,
                 data: { confirm: 'Are you sure?' }, remote: true %>

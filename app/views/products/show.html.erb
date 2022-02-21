@@ -2,8 +2,7 @@
 <div class="">
   <div class="">
     <div style="display: flex; flex-direction: column;">
-      <%= image_tag "" + @product.image, class: ""%>
-      <%= @product.image %>
+      <%= image_tag(@product.image, alt: "", class: "") %>
     </div>
     <p>
       <strong>Название:</strong>

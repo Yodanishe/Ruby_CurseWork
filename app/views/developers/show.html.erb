@@ -1,13 +1,22 @@
-<div class="" id="">
-  <%= @developer.title %>
-  <%= image_tag(@developer.image, alt: "", class: "") %>
-  <%= @developer.description %>
-</div>
-
+<div style="display: flex; justify-content: center;">
 <div class="">
-  <%= render @developer.products %>
-</div>
+  <div class="">
+    <div style="display: flex; flex-direction: column;">
+      <%= image_tag(@developer.image, alt: "", class: "") %>
+    </div>
+    <p>
+      <strong>Название:</strong>
+      <%= @developer.title %><br><br>
+      <strong>Описание:</strong>
+      <%= @developer.description %><br><br>
+    </p>
+  </div>
+<hr>
+  <div class="">
+    <%= render @developer.products %>
+  </div>
 
-<%= link_to "Add product", new_developer_product_path(@developer, @developer.products.build),
+<%= link_to "Добавить игру", new_developer_product_path(@developer, @developer.products.build),
     class: "", id: "" %>
-<%= link_to "Back", developers_path, class: "", id: "" %>
+<%= link_to "Назад", developers_path, class: "", id: "" %>
+</div>
