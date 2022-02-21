@@ -12,9 +12,9 @@ RSpec.describe 'Products', type: :request do
     end
 
     it 'assigns the all products' do
-      subject { Product.all }
+      products = Product.all
 
-      expect(subject).to eq('test')
+      expect(products).to eq('test')
     end
   end
 end
