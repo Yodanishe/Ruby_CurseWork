@@ -6,7 +6,7 @@ class DevelopersController < ApplicationController
   end
 
   def search
-    @products = Developer.all
+    @products = Product.all
     @products = @products.where('name LIKE ?', "%#{params[:q]}%")
   end
 
@@ -15,26 +15,26 @@ class DevelopersController < ApplicationController
   end
 
   def new
-      @developer = Developer.new
+    @developer = Developer.new
   end
 
   def edit
-      @developer = Developer.find(params[:id])
+    @developer = Developer.find(params[:id])
   end
 
   def create
-      @developer = Developer.new(developer_params)
-      developer_save
+    @developer = Developer.new(developer_params)
+    developer_save
   end
 
   def update
-      @developer = Developer.find(params[:id])
-      developer_update
+    @developer = Developer.find(params[:id])
+    developer_update
   end
 
   def destroy
-      @developer = Developer.find(params[:id])
-      @developer.destroy
+    @developer = Developer.find(params[:id])
+    @developer.destroy
   end
 
   private
