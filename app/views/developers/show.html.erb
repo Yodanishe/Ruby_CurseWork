@@ -1,0 +1,9 @@
+<div class="" id=""> <%= @developer.title %> </div>
+
+<div class="">
+  <%= render @developer.products %>
+</div>
+
+<%= link_to (image_tag ""), new_developer_product_path(@developer, @developer.products.build),
+    class: "", id: "" %>
+<%= link_to (image_tag ""), developers_path, class: "", id: "" %>

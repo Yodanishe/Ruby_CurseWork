@@ -1,0 +1,26 @@
+<%= form_with model: @developer, local: true do |form| %>
+ 
+  <% if @developer.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@developer.errors.count, "error") %> prohibited
+        this developer from being saved:
+      </h2>
+      <ul>
+        <% @developer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div class="editForm">
+    <p>
+      <%= form.text_field :title, class: "editTextField" %>
+    </p>
+  </div>
+
+  <%= form.submit class: "submitForm" %>
+
+ 
+<% end %>

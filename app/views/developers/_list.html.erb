@@ -1,0 +1,14 @@
+<div class="">Список категорий</div>
+
+<div class="">
+  <%= link_to 'Добавить категорию', new_developer_path, class: "" %>
+  <% @developers.each do |developer| %>
+    <div class="">
+      <%= link_to developer.title, developer_path(developer), class: "", id: "" %>
+    </div>
+    <%= link_to 'Редактировать', edit_developer_path(developer), class: ""%>
+    <%=  link_to 'Убрать категорию', developer_path(developer), class: "",
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>
