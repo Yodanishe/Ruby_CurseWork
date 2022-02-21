@@ -12,18 +12,17 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
-gem 'breadcrumbs_on_rails'
-gem 'meta-tags'
 gem 'activestorage'
 gem 'bootstrap-sass'
+gem 'breadcrumbs_on_rails'
 gem 'coffee-rails'
 gem 'faker', git: 'http://github.com/faker-ruby/faker.git', branch: 'master'
 gem 'jquery-rails'
+gem 'meta-tags'
 gem 'oj'
 gem 'oj_mimic_json'
 gem 'rexml'
 gem 'uglifier'
-
 
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
