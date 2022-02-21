@@ -1,14 +1,38 @@
-<div class="">Список категорий</div>
 
-<div class="">
-  <%= link_to 'Добавить категорию', new_developer_path, class: "" %>
-  <% @developers.each do |developer| %>
-    <div class="">
-      <%= link_to developer.title, developer_path(developer), class: "", id: "" %>
+<div class="bnr" id="home">
+<div class="about">
+    <div class="container">
+      <div class="about-top grid-1">
+        <% @developers.each do |developer| %>
+          <div class="col-md-4 about-left">
+            <div class="effect-bubba">
+                <%= link_to developer_path(developer) do %>
+                  <%= developer.title%>
+                  <%= image_tag(developer.image, alt: "", class: "img-responsive") %>
+                <% end %>
+                <%= button_to 'Редактировать', edit_developer_path(developer), class: ""%>
+                <%= button_to 'Удалить', developer, class: "",
+                            method: :delete,
+                            data: { confirm: 'Are you sure?' }, remote: true %>
+                <hr style="border-top: 4px solid #bbb;border-radius: 3px;">
+            </div>
+          </div>
+        <% end %>
+        <%= link_to 'Добавить разработчика', new_developer_path, class: "" %>
+
+        <hr style="border-top: 6px solid #bbb;border-radius: 2px;">
+
+        <% @developers.each do |developer| %>
+          <div class="">
+              <%= render developer.products %>
+          </div>
+        <% end %>
+        <div class="clearfix"></div>
+      </div>
     </div>
-    <%= link_to 'Редактировать', edit_developer_path(developer), class: ""%>
-    <%=  link_to 'Убрать категорию', developer_path(developer), class: "",
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-  <% end %>
+  </div>
+</div>
+<div class="">
+  
+  
 </div>

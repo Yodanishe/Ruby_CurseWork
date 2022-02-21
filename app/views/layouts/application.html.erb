@@ -6,11 +6,37 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= display_meta_tags title: @page_title, depription: @page_description, keywords: @page_keywords %>
+
+    <%= stylesheet_link_tag 'bootstrap', media: 'all' %>
+    <%= stylesheet_link_tag 'flexslider', media: 'all' %>
+    <%= stylesheet_link_tag 'memenu', media: 'all' %>
+    <%= stylesheet_link_tag 'style', media: 'all' %>
+    <%= stylesheet_link_tag 'mystyle', media: 'all' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+
+  <%= render 'layouts/top_header' %>
+
+  <div class="logo">
+    <%= link_to root_path do %>
+      <h1>SIBGUCHI GAMES</h1>
+    <% end %>
+  </div>
+
+  <%= render 'layouts/bottom_header' %>
+
+  <div class="content">
     <%= yield %>
+  </div>
+
+  <%= render 'layouts/footer' %>
+
+  <script src="<%= asset_path 'application' %>"></script>
   </body>
 </html>

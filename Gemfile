@@ -8,11 +8,23 @@ ruby '3.0.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails'
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
+gem 'breadcrumbs_on_rails'
+gem 'meta-tags'
+gem 'activestorage'
 gem 'bootstrap-sass'
+gem 'coffee-rails'
+gem 'faker', git: 'http://github.com/faker-ruby/faker.git', branch: 'master'
+gem 'jquery-rails'
+gem 'oj'
+gem 'oj_mimic_json'
+gem 'rexml'
+gem 'uglifier'
+
+
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'

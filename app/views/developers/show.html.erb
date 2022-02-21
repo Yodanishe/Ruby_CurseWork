@@ -1,4 +1,8 @@
-<div class="" id=""> <%= @developer.title %> </div>
+<div class="" id="">
+  <%= @developer.title %>
+  <%= image_tag(@developer.image, alt: "", class: "") %>
+  <%= @developer.description %>
+</div>
 
 <div class="">
   <%= render @developer.products %>

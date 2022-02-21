@@ -2,6 +2,9 @@
 
 Rails.application.routes.draw do
   get 'developers/index'
+  get 'search', to: 'developers#search'
+
+  resource :search
   resources :developers do
     resources :products
   end

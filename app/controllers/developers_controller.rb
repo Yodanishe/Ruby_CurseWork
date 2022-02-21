@@ -7,7 +7,7 @@ class DevelopersController < ApplicationController
 
   def search
     @products = Product.all
-    @products = @products.where('name LIKE ?', "%#{params[:q]}%")
+    @products = @products.where('title LIKE ?', "%#{params[:q]}%")
   end
 
   def show
@@ -23,24 +23,30 @@ class DevelopersController < ApplicationController
   end
 
   def create
+    if params['developer']['image'].nil? then params['developer']['image'] = 'none.jpg'
+    else
+      image_load
+    end
     @developer = Developer.new(developer_params)
     developer_save
   end
 
   def update
     @developer = Developer.find(params[:id])
+    image_load unless params['image'].nil?
     developer_update
   end
 
   def destroy
     @developer = Developer.find(params[:id])
     @developer.destroy
+    redirect_to developers_path
   end
 
   private
 
   def developer_params
-    params.require(:developer).permit(:title)
+    params.require(:developer).permit(:title, :description, :image)
   end
 
   def developer_save
@@ -57,5 +63,12 @@ class DevelopersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def image_load
+    uploaded_io = developer_params['image']
+    File.binwrite(Rails.root.join('app', 'assets', 'images', uploaded_io.original_filename),
+                  uploaded_io.read)
+    params['developer']['image'] = uploaded_io.original_filename
   end
 end
