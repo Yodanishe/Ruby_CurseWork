@@ -1,0 +1,17 @@
+
+<div class="col-md-4 about-left">
+  <div class="effect-bubba">
+
+    <%= link_to [product.developer, product], class: "" do %>
+      <%= product.title %>
+      <%= image_tag(product.image, alt: "", class: "img-responsive") %>
+    <% end %>
+
+    <%= button_to 'Edit', edit_developer_product_path(product.developer, product), class: ""%>
+    <%= button_to 'Удалить', [product.developer, product], class: "",
+                method: :delete,
+                data: { confirm: 'Are you sure?' }, remote: true %>
+    <hr style="border-top: 4px solid #bbb;border-radius: 3px;">
+    <div class="clearfix"></div>
+  </div>
+</div>

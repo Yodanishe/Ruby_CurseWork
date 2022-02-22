@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  it { should validate_presence_of :title }
-  it { should validate_presence_of :price }
+  it 'valid title' do
+    developer = Developer.create(title: 'test', description: 'test')
+    product = developer.products.create(title: 'test', description: 'test', price: 10.0)
+    expect(product).to be_valid
+  end
 end

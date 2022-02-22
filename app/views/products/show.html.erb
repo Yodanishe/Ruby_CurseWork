@@ -1,0 +1,19 @@
+<div style="display: flex; justify-content: center;">
+<div class="">
+  <div class="">
+    <div style="display: flex; flex-direction: column;">
+      <%= image_tag(@product.image, alt: "", class: "") %>
+    </div>
+    <p>
+      <strong>Название:</strong>
+      <%= @product.title %><br><br>
+      <strong>Описание:</strong>
+      <%= @product.description %><br><br>
+      <strong>Цена:</strong>
+      <%= @product.price %><br><br>
+    </p>
+  </div>
+
+  <%= link_to 'Назад', developer_path(@developer), class: "" %>
+  <%= link_to 'Редактировать', edit_developer_product_path(@developer, @product), class: "" %>
+</div>

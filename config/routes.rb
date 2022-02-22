@@ -1,4 +1,13 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
-  root to: 'main#index'
+Rails.application.routes.draw do
+  get 'developers/index'
+  get 'search', to: 'developers#search'
+
+  resource :search
+  resources :developers do
+    resources :products
+  end
+
+  root 'home#index'
 end

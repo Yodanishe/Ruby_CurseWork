@@ -1,6 +1,9 @@
-class Product < ApplicationRecord
-  validates :title, presence: true
-  validates :price, presence: true
+# frozen_string_literal: true
 
-  enum hit: { hit: 1, not_hit: 0 }
+class Product < ApplicationRecord
+  belongs_to :developer
+
+  validates :title, presence: true
+  validates :description, presence: true
+  validates :price, presence: true, numericality: { only_float: true, greater_than: 0 }
 end

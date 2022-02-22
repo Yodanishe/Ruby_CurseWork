@@ -1,0 +1,51 @@
+
+<div class="">
+  <%= form_with model: [ @developer, @product ], local: true do |form| %>
+    <% if @developer.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@developer.errors.count, "error") %> prohibited
+          this developer from being saved:
+        </h2>
+        <ul>
+          <% @developer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <% if @developer.products.build.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@developer.products.build.errors.count, "error") %> prohibited
+          this developer from being saved:
+        </h2>
+        <ul>
+          <% @developer.products.build.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title, class: "" %>
+    </p>
+    <p>
+      <%= form.label :description %><br>
+      <%= form.text_field :description, class: "" %>
+    </p>
+    <p>
+      <%= form.label :price %><br>
+      <%= form.number_field :price, min: 0, step: :any, class: "" %>
+    </p>
+    <p>
+      <%= form.label :image %><br>
+      <%= form.file_field :image, class: "" %>
+    </p>
+    <p>
+      <%= form.submit class: "" %>
+    </p>
+  <% end %>
+</div>
