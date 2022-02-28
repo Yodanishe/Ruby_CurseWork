@@ -1,31 +1,36 @@
-
+<div style="display: flex; justify-content: center;">
+  <h2> Games</h2>
+</div>
 <div class="bnr" id="home">
   <div class="about">
     <div class="container">
       <div class="about-top grid-1">
         <% @developers.each do |developer| %>
-          <div class="col-md-4 about-left">
-            <div class="effect-bubba">
+          <div class="">
+            <%= render developer.products %>
+          </div>
+        <hr style="border-top: 6px solid #bbb;border-radius: 2px;">
+        <div class="clearfix"> </div>
+        <div style="display: flex; justify-content: center;">
+          <h2> Developers</h2>
+        </div>
+        <% @developers.each do |developer| %>
+            <div class="col-md-4 about-left">
+              <div class="effect-bubba">
                 <%= link_to developer_path(developer) do %>
                   <%= developer.title%>
                   <%= image_tag(developer.image, alt: "", class: "img-responsive") %>
                 <% end %>
                 <%= link_to 'Edit', edit_developer_path(developer), class: ""%>
                 <%= button_to 'Удалить', developer, class: "",
-                            method: :delete,
-                            data: { confirm: 'Are you sure?' }, remote: true %>
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' }, remote: true %>
                 <hr style="border-top: 4px solid #bbb;border-radius: 3px;">
+              </div>
             </div>
-          </div>
-        <% end %>
-        <%= link_to 'Добавить разработчика', new_developer_path, class: "" %>
-
-        <hr style="border-top: 6px solid #bbb;border-radius: 2px;">
-
-        <% @developers.each do |developer| %>
-          <div class="">
-              <%= render developer.products %>
-          </div>
+          <% end %>
+          <%= link_to 'Добавить разработчика', new_developer_path, class: "" %>
+          <div class="clearfix"> </div>
         <% end %>
         <div class="clearfix"></div>
       </div>
