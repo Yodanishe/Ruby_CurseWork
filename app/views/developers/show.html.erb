@@ -1,4 +1,4 @@
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: left;">
   <div class="">
     <div style="display: flex; flex-direction: column;">
       <%= image_tag(@developer.image, alt: "", class: "") %>
@@ -11,10 +11,10 @@
     </p>
   </div>
   <hr>
+  <div class="clearfix"> </div><div class="clearfix"> </div>
   <div class="">
     <%= render @developer.products %>
   </div>
-
     <%= link_to "Добавить игру", new_developer_product_path(@developer, @developer.products.build),
         class: "", id: "" %>
     <%= link_to "Назад", developers_path, class: "", id: "" %>
