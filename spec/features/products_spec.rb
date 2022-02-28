@@ -21,6 +21,12 @@ describe '#Product', type: :feature do
       expect(page).to have_text('Название: MyString')
     end
 
+    it 'show' do
+      product = create(:product, developer_id: @developer.id)
+      subject {get :show, params: {id: product.id}}
+      is_expected.to render_template :show
+    end
+
     it 'update' do
       product = create(:product, developer_id: @developer.id)
       visit "/developers/#{@developer.id}/products/#{product.id}/edit"

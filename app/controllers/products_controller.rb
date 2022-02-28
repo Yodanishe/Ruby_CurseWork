@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   def show
     @developer = Developer.find(params[:developer_id])
     @product = @developer.products.find(params[:id])
+    set_page_options
   end
 
   def new
@@ -42,6 +43,14 @@ class ProductsController < ApplicationController
     @product = @developer.products.find(params[:id])
     @product.destroy
     redirect_to developer_path(@developer)
+  end
+
+  attr_accessor :product
+
+  def set_page_options
+    set_meta_tags product.slice(:title, :description)
+    @page_title = product.title
+    @page_description = product.description
   end
 
   private
