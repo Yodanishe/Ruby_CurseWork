@@ -11,6 +11,7 @@
           </div>
         <hr style="border-top: 6px solid #bbb;border-radius: 2px;">
         <div class="clearfix"> </div>
+        <% end %>
         <div style="display: flex; justify-content: center;">
           <h2> Developers</h2>
         </div>
@@ -20,7 +21,6 @@
                 <%= link_to developer_path(developer) do %>
                   <%= developer.title%>
                   <%= image_tag(developer.image, alt: "", class: "img-responsive") %>
-                <% end %>
                 <%= link_to 'Edit', edit_developer_path(developer), class: ""%>
                 <%= button_to 'Удалить', developer, class: "",
                               method: :delete,
@@ -29,9 +29,8 @@
               </div>
             </div>
           <% end %>
-          <%= link_to 'Добавить разработчика', new_developer_path, class: "" %>
-          <div class="clearfix"> </div>
         <% end %>
+        <%= link_to 'Добавить разработчика', new_developer_path, class: "" %>
         <div class="clearfix"></div>
       </div>
     </div>
